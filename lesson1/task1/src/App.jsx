@@ -6,7 +6,7 @@ class App extends Component {
     theme: themes.light,
   };
   toggleTheme = () => {
-    const newTheme = this.state.theme === themes.dark ? themes.light : themes.light;
+    const newTheme = this.state.theme === themes.light ? themes.dark : themes.light;
     this.setState({
       theme: newTheme,
     });
@@ -16,8 +16,8 @@ class App extends Component {
       <div>
         <ThemeContext.Provider value={this.state.theme}>
           <ThemedButton onClick={this.toggleTheme}>Dynamic Theme</ThemedButton>
-          <ThemedButton onClick={this.toggleTheme}>Default Theme</ThemedButton>
         </ThemeContext.Provider>
+        <ThemedButton onClick={this.toggleTheme}>Default Theme</ThemedButton>
       </div>
     );
   }
