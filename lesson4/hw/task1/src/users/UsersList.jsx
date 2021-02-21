@@ -8,8 +8,11 @@ class UsersList extends Component {
   render() {
     const { users, currentPage, goNext, goPrev } = this.props;
     const itemsPerPage = 3;
-    const start = (currentPage - 1) * itemsPerPage;
-    const usersToDispaly = users.slice(start, start + itemsPerPage);
+
+    const usersToDispaly = users.slice(
+      currentPage * itemsPerPage,
+      itemsPerPage + currentPage * itemsPerPage
+    );
 
     return (
       <div>
