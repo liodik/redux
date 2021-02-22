@@ -4,7 +4,7 @@ import * as usersActions from './users.actions';
 
 class SearchField extends Component {
   state = {
-    userName: 'github',
+    userName: '',
   };
   onChange = e => {
     this.setState({ userName: e.target.value });
