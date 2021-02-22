@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as usersActions from './users.actions';
-import { getUserData } from './users.gateway';
 
 class SearchField extends Component {
   state = {
-    userName: '',
+    userName: 'github',
   };
   onChange = e => {
     this.setState({ userName: e.target.value });
