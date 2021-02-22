@@ -10,9 +10,7 @@ class SearchField extends Component {
     this.setState({ userName: e.target.value });
   };
 
-  handleUserSearch = () => {
-    this.props.fetchUserData(this.state.userName);
-  };
+  handleUserSearch = () => this.props.fetchUserData(this.state.userName);
 
   render() {
     return (
