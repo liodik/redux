@@ -9,10 +9,9 @@ const reducer = combineReducers({
 const logger = store => next => action => {
   console.group(action.type);
   console.info('dispatching', action);
-  const result = next(action);
+  let result = next(action);
   console.log('next state', store.getState());
   console.groupEnd();
-  return result;
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
